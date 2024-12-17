@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { createCar } from "../controllers/car.controllers.js";
 
 export const car = Router();
 
-car.use("/", (req, res) => {
-  res.send("Estas en cars de ROUTES");
+car.get("/create-car", (req, res) => {
+  res.send(createCar);
 });

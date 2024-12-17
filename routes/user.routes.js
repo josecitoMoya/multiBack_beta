@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { createUser } from "../controllers/user.controllers.js";
 
 export const user = Router();
 
-user.use("/", (req, res) => {
-  res.send("Estas en user de ROUTES");
+user.get("/create-user", (req, res) => {
+  res.send(createUser);
 });
